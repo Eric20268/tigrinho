@@ -1,24 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roleta Vertical</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="roulette-container">
-        <div class="roulette">
-            <div class="roulette-item">Item 1</div>
-            <div class="roulette-item">Item 2</div>
-            <div class="roulette-item">Item 3</div>
-            <div class="roulette-item">Item 4</div>
-            <div class="roulette-item">Item 5</div>
-            <div class="roulette-item">Item 6</div>
-        </div>
-        <button class="spin-button" onclick="spinRoulette()">Girar</button>
-    </div>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Estilo roleta russa</title>
+        <link rel="stylesheet" href="style/main.css">
+        <script defer src="scripts/script.js"></script>
+    </head>
+    <body>
+        <div class="roleta-box">
+            <div class="img-box">
+                <img src="img/Capturar.PNG" alt="Valter">
+            </div>
 
-    <script src="script.js"></script>
-</body>
+            <span class="arrow"></span>
+            <div class="roleta">
+                <div class="um">1</div>
+                <div class="dois">2</div>
+                <div class="tres">3</div>
+                <div class="quatro">4</div>
+                <div class="cinco">5</div>
+                <div class="seis">6</div>
+                <div class="sete">7</div>
+                <div class="oito">8</div>
+            </div>
+
+            <div class="area-entrada">
+                <h2>Caixa de entrada</h2>
+                <textarea name="area-entrada" id="area-entrada"></textarea>
+            </div>
+
+            <div class="box-baixo">
+                <div class="disco">
+                    <span class="linha"></span>
+                </div>
+                <div class="moeda">
+                    <span class="linha"></span>
+                </div>
+            </div>
+            <div class="botoes-box">
+                <div class="buttons-left">
+                    <button></button><button></button><button></button><button></button>
+                </div>
+                <button class="button-center" onclick="spin()">Girar!</button>
+                <div class="buttons-right">
+                    <button></button><button></button><button></button><button></button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        function spin() {
+            const roletaContainer = document.querySelector('.roleta-container');
+            roletaContainer.style.animation = 'girar 3s ease-out forwards';
+        }
+    </script>
+    </body>
 </html>
