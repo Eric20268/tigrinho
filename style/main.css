@@ -30,7 +30,7 @@ body {
     height: 200px;
     background:#3d4fed;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-around;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -40,6 +40,7 @@ body {
     width: 180px;
     display: block;
     border-radius: 10px;
+
 }
 
 .roleta{
@@ -128,7 +129,7 @@ body {
 .allarea{
     display: normal;
 }
-.allarea .ativar{
+.allarea.ativar{
     display: none;
     visibility: hidden;
 }

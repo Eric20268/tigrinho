@@ -1,7 +1,7 @@
 var btn = document.querySelector('.moeda')
-var allarea = document.querySelector('.allarea')
+var caixa = document.querySelector('.allarea')
 
-btn.addEventListener('click', function esconder() {
+btn.onclick = function(){
 
-   allarea.classList.add('ativar')
-})
+    caixa.classList.toggle('ativar')
+}
