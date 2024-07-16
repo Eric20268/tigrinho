@@ -13,7 +13,7 @@ body {
 
 .roleta-box {
     margin-top: 50px;
-    width: 70%;
+    width: 90%;
     height: fit-content;
     background: #fff;
     border-radius: 10px;
@@ -23,6 +23,7 @@ body {
     flex-direction: column;
     gap:30px;
     position: relative;
+    box-shadow: 0 10px 10px black;
 }
 
 .img-box {
@@ -40,7 +41,13 @@ body {
     width: 180px;
     display: block;
     border-radius: 10px;
+    transform: translateY(0);
+    animation: animarFlutuacao 2s ease-in-out infinite;
+}
 
+@keyframes animarFlutuacao {
+    0%,100%{transform: translateY(0px);}
+    50%{transform: translateY(8px);}
 }
 
 .roleta{
@@ -126,22 +133,22 @@ body {
     content: "\1F817";
     font-size: 90px;
 }
-.allarea{
-    display: normal;
-}
-.allarea.ativar{
-    display: none;
-    visibility: hidden;
-}
+
 .area-entrada{
     position:absolute;
     top:50%;
     right: 0;
+    width: 0px;
     transform: translateY(-50%);
     z-index: 2;
     background:#ccc;
     padding:10px;
     border-radius: 10px;
+    overflow: hidden;
+}
+
+.area-entrada.ativar{
+    width: 300px;
 }
 
 .area-entrada h2{
@@ -153,9 +160,14 @@ body {
 }
 
 #area-entrada{
+    overflow: hidden;
+    height: 0px;
+    width: 0px;
+    resize: none;
+}
+#area-entrada.ativar{
     height: 60px;
     width: 300px;
-    resize: none;
 }
 
 .box-baixo {
